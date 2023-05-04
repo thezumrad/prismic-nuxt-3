@@ -1,0 +1,5 @@
+{
+  "repositoryName": "prismicnuxt3",
+  "adapter": "@slicemachine/adapter-nuxt",
+  "libraries": ["./slices"]
+}
