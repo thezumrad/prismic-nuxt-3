@@ -15,6 +15,6 @@ const { data: homepage } = await useAsyncData("homepage", () =>
 
     <NuxtLink to="/blog" >blog</NuxtLink>
     <br>
-    <NuxtLink to="/blog" >news</NuxtLink>
+    <NuxtLink to="/news" >news</NuxtLink>
   </div>
 </template>
