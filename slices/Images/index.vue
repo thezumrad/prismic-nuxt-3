@@ -7,7 +7,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Content } from "@prismicio/client";
 
 // The array passed to `getSliceComponentProps` is purely optional.

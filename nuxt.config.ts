@@ -9,21 +9,21 @@ export default defineNuxtConfig({
     locales: [{
         code: "en",
         iso: "en-US",
-        name: "English(US)",
+        name: "English(US)"
       },
       {
         code: "it",
         iso: "it-IT",
-        name: "Italiano",
+        name: "Italiano"
       },
       {
         code: "az",
         iso: "az-AZ",
-        name: "Azərbaycanca",
+        name: "Azərbaycanca"
       },
     ],
-    detectBrowserLanguage: false,
     defaultLocale: "en",
+    detectBrowserLanguage: false,
     vueI18n: './i18n.config.ts' // if you
   },
   prismic: {
