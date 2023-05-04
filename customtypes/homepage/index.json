@@ -1,0 +1,14 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "Text",
+        "config": { "label": "Heading", "placeholder": "" }
+      }
+    }
+  }
+}

@@ -31,7 +31,36 @@ interface BlogDocumentData {
  */
 export type BlogDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
-export type AllDocumentTypes = BlogDocument;
+/** Content for Homepage documents */
+interface HomepageDocumentData {
+  /**
+   * Heading field in *Homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismicT.KeyTextField;
+}
+/**
+ * Homepage document from Prismic
+ *
+ * - **API ID**: `homepage`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomepageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<HomepageDocumentData>,
+    "homepage",
+    Lang
+  >;
+export type AllDocumentTypes = BlogDocument | HomepageDocument;
 /**
  * Primary content in Images → Primary
  *
@@ -86,6 +115,8 @@ declare module "@prismicio/client" {
     export type {
       BlogDocumentData,
       BlogDocument,
+      HomepageDocumentData,
+      HomepageDocument,
       AllDocumentTypes,
       ImagesSliceDefaultPrimary,
       ImagesSliceDefault,

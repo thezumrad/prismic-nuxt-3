@@ -10,6 +10,7 @@
     "slicemachine": "start-slicemachine"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.11",
     "@nuxtjs/prismic": "^3.0.0-rc.4",
     "@slicemachine/adapter-nuxt": "^0.1.2",
     "@types/node": "^18",
