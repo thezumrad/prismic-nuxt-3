@@ -43,6 +43,14 @@ export default defineNuxtConfig({
           type: "blog",
           path: "/:lang/blog/[uid]",
         },
+        {
+          type: "news",
+          path: "/:lang/news",
+        },
+        {
+          type: "news",
+          path: "/:lang/news/[uid]",
+        },
       ],
     },
   }

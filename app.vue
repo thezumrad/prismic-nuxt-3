@@ -7,26 +7,30 @@
 
 <style>
 body {
-  background-color: #f0f0f0;
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  text-align: center;
-  font-family: sans-serif;
+background-color: aliceblue;
+display: grid;
+place-content: center;
+height: 100vh;
+text-align: center;
+font-family: cursive;
+transition: background-color 0.5s ease;
 }
 
 a,
 a:visited {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 10px;
-  background-color: cadetblue;
-  border-radius: 5px;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 50px;
+color: #fff;
+text-decoration: none;
+padding: 16px 32px;
+background-color: blue;
+border-radius: 5px;
+font-size: 29px;
+display: block;
+margin-bottom: 50px;
+transition: background-color 0.5s ease, transform 0.3s ease;
+transform-origin: center;
 }
 a:hover {
-  background-color: rgb(23, 61, 62);
+background-color: rgb(23, 61, 62);
+transform: scale(1.1);
 }
 </style>
