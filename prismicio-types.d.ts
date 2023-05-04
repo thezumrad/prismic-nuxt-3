@@ -32,6 +32,49 @@ interface BlogDocumentData {
 export type BlogDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
 export type AllDocumentTypes = BlogDocument;
+/**
+ * Primary content in Images → Primary
+ *
+ */
+interface ImagesSliceDefaultPrimary {
+  /**
+   * Image field in *Images → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: images.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Images Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImagesSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<ImagesSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Images*
+ *
+ */
+type ImagesSliceVariation = ImagesSliceDefault;
+/**
+ * Images Shared Slice
+ *
+ * - **API ID**: `images`
+ * - **Description**: `Images`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImagesSlice = prismicT.SharedSlice<"images", ImagesSliceVariation>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -40,6 +83,14 @@ declare module "@prismicio/client" {
     ): prismic.Client<AllDocumentTypes>;
   }
   namespace Content {
-    export type { BlogDocumentData, BlogDocument, AllDocumentTypes };
+    export type {
+      BlogDocumentData,
+      BlogDocument,
+      AllDocumentTypes,
+      ImagesSliceDefaultPrimary,
+      ImagesSliceDefault,
+      ImagesSliceVariation,
+      ImagesSlice,
+    };
   }
 }
