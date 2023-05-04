@@ -1,7 +1,7 @@
 <script setup>
 const { client } = usePrismic();
 
-const { data: posts } = await useAsyncData("posts", () =>
+const { data: news } = await useAsyncData("news", () =>
   client.getAllByType("blog")
 );
 </script>
@@ -11,7 +11,7 @@ const { data: posts } = await useAsyncData("posts", () =>
   <div style="display: flex; flex-direction: column;">
     
          <!-- {{posts}} -->
-    <NuxtLink v-for="post in posts" :to="`/blog/${post.uid}`" style="margin: 2rem;font-size: 2rem;">
+    <NuxtLink v-for="post in news" :to="`/news/${post.uid}`" style="margin: 2rem;font-size: 2rem;">
       {{post.data.title[0].text}}
     </NuxtLink>
   
