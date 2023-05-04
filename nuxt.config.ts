@@ -4,7 +4,6 @@ export default defineNuxtConfig({
      "@nuxtjs/i18n",
     "@nuxtjs/prismic"
   ],
-   ssr: false,
   i18n: {
     strategy: "prefix_except_default",
     locales: [{
