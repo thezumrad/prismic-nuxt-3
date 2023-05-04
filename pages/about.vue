@@ -1,9 +1,9 @@
 <script setup >
-const localPath = useLocalePath();
+// const localPath = useLocalePath();
 </script>
 <template>
   <div>
-    <h1>{{ $t("aboutTitle") }}</h1>
-    <NuxtLink :to="localPath('/')">{{ $t("homeBtn") }}</NuxtLink>
+    <h1>about</h1>
+    <NuxtLink :to="'/'">home</NuxtLink>
   </div>
 </template>

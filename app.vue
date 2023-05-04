@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtPage />
-    <LangSwitcher style="padding-top: 90px" />
+    <!-- <LangSwitcher style="padding-top: 90px" /> -->
   </div>
 </template>
 

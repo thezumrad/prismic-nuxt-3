@@ -3,7 +3,7 @@ const { client } = usePrismic();
 const route = useRoute();
 
 const { data: post } = await useAsyncData("post", async () => {
-  const document = await client.getSingle("blog", { lang: 'it-it' });
+  const document = await client.getByUID("blog", route.params.uid);
 
   if (document) {
     return document;
@@ -11,7 +11,8 @@ const { data: post } = await useAsyncData("post", async () => {
     throw createError({ statusCode: 404, message: "Page not found" });
   }
 });
-</script>
+console.log(post.value.uid,  route.params.uid)
+</script>>
 
 <template>
   <div>
