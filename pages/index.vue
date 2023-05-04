@@ -2,7 +2,7 @@
 const { client } = usePrismic();
 const localPath = useLocalePath();
 const { data: homepage } = await useAsyncData("homepage", () =>
-  client.getSingle("homepage", { lang: "az-az" })
+  client.getSingle("homepage", { lang: "it-it" })
 );
 </script>
 
@@ -11,7 +11,7 @@ const { data: homepage } = await useAsyncData("homepage", () =>
     <NuxtLink :to="localPath('/about')">{{ $t("aboutBtn") }}</NuxtLink>
 
    <h1>{{ $t("homeTitle") }}</h1>
-    <!-- {{ homepage.data.heading }} -->
+    {{ homepage.data.heading }}
 
     <NuxtLink to="/blog" >blog</NuxtLink>
   </div>

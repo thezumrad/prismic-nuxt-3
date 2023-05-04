@@ -3,7 +3,7 @@ const { client } = usePrismic();
 const route = useRoute();
 
 const { data: post } = await useAsyncData("post", async () => {
-  const document = await client.getSingle("blog", { lang: route.params.lang });
+  const document = await client.getSingle("blog", { lang: 'it-it' });
 
   if (document) {
     return document;

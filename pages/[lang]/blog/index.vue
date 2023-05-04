@@ -14,6 +14,7 @@ const { data: posts } = await useAsyncData("posts", () =>
     <NuxtLink v-for="post in posts" :to="`/blog/${post.uid}`" style="margin: 2rem;font-size: 2rem;">
       {{post.data.title[0].text}}
     </NuxtLink>
+    t
   </div>
 
 </template>
