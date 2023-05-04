@@ -8,9 +8,9 @@ const { data: homepage } = await useAsyncData("homepage", () =>
 
 <template>
   <div>
-    <NuxtLink :to="localPath('/about')">{{ $t("about_btn") }}</NuxtLink>
+    <NuxtLink :to="localPath('/about')">{{ $t("aboutBtn") }}</NuxtLink>
 
-
+   <h1>{{ $t("homeTitle") }}</h1>
     <!-- {{ homepage.data.heading }} -->
 
     <NuxtLink to="/blog" >blog</NuxtLink>
